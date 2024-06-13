@@ -1,5 +1,5 @@
 db.users.aggregate([
-    {$match: {is_dlocked:{$ne:true}}}
+    {$match: {is_blocked:{$ne:true}}}
 ])
 db.users.countDocuments(
     {is_blocked:{$ne:true}}
