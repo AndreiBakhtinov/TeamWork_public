@@ -7,3 +7,7 @@ db.videos.aggregate([// на входе коллeкция
     },
     { $count: 'total_videos' }// общее количество роликов до 2 часов
 ])
+  // task2
+db.videos.countDocuments(
+{duration_secs: { $lt: 120 * 60 }
+})
