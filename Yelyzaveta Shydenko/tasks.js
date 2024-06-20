@@ -6,3 +6,7 @@ db.videos.aggregate([
       $count: 'total videos' 
    } // кол-во роликов до 2 часов 
 ])
+
+db.videos.countDocuments(
+{duration_secs: { $lt: 120 * 60 }}
+)
