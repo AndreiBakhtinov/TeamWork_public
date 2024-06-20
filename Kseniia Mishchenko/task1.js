@@ -1,10 +1,14 @@
-db.videos.aggregate([
-    {
-        $match: {
-            duration: { $lt: 120 }
-        }
-    },
-    {
-        $count: "total_videos"
-    }
-]) 
+db.collection.aggregate(
+    [
+    
+    { //на входе коллекция видео
+        $match: { duration_secs: { $lt: 120*60 } }
+        // на выходе  фильтрация  документов, у которых значение поля duration_secs меньше 2 часов
+        }, 
+        { // на входе количество видео 
+             $count: 'total_videos' 
+             // на выходе  количество документов
+             }
+    
+    ]
+    )
