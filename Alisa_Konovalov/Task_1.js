@@ -1,7 +1,7 @@
 db.videos.aggregate([
 //вход коллекция видео
-   {$match: { duration_secs: {$lt: 120 * 60}}},
+{$match: { duration_secs: {$lt: 120 * 60}}},
 //сортировка по продолжительности видео
-  { $count:  'total videos'}
+{ $count:  'total videos'}
 // выход документa с количеством видео
 ])
