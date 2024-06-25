@@ -1,1 +1,5 @@
-git@github.com:LiubomyrShmalii/TeamWork_public.git
+SELECT 
+LastName
+FROM Employees
+WHERE
+EmployeeID IN (SELECT EmployeeID FROM Orders)
